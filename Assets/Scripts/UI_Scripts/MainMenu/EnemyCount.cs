@@ -11,6 +11,8 @@ public class EnemyCount : MonoBehaviour
     [SerializeField] private GameObject enemySetPrefab;
     [SerializeField] private GameObject enemySetParent;
 
+    public Color[] colors = { Color.red, Color.yellow, Color.gray, Color.black, Color.blue, Color.cyan, Color.green };
+
     void Start()
     {
         //Invoke("CreateEnemy", 0.05f);
@@ -18,7 +20,6 @@ public class EnemyCount : MonoBehaviour
     }
     public void CreateEnemy()
     {
-        Color[] colors = { Color.red, Color.yellow, Color.gray, Color.black, Color.blue, Color.cyan, Color.green };
         gameObjects = GameObject.FindGameObjectsWithTag("EnemySet");
         for (int i = 0; i < gameObjects.Length; i++)
         {
